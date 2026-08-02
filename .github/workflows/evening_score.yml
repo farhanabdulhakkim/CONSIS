@@ -1,19 +1,39 @@
 name: Evening Check-in & Score Update
 
 on:
-  workflow_dispatch: # Manual trigger so you only get points if you actually did the work
+  workflow_dispatch: 
+    inputs:
+      dsa_done:
+        description: 'Completed DSA Problem? (+10 XP)'
+        required: true
+        type: boolean
+        default: false
+      gym_done:
+        description: 'Completed Gym Protocol? (+10 XP)'
+        required: true
+        type: boolean
+        default: false
+      dev_done:
+        description: 'Completed Custom Dev/Project Task? (+15 XP)'
+        required: true
+        type: boolean
+        default: false
+      tomorrows_task:
+        description: 'What is your main focus/task for tomorrow?'
+        required: false
+        type: string
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to commit the new score back to your repo
+      contents: write 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with: 
           python-version: '3.10'
           
@@ -25,13 +45,16 @@ jobs:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+          DSA_DONE: ${{ github.event.inputs.dsa_done }}
+          GYM_DONE: ${{ github.event.inputs.gym_done }}
+          DEV_DONE: ${{ github.event.inputs.dev_done }}
         run: python main.py --evening
       
-      - name: Commit new score to Repository
+      - name: Commit new score and focus to Repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add score.txt
-          git commit -m "Update consistency score (+10 XP)" || echo "No changes to commit"
+          echo "${{ github.event.inputs.tomorrows_task }}" > focus.txt
+          git add score.txt focus.txt
+          git commit -m "Update consistency score and tomorrow's focus" || echo "No changes to commit"
           git push
