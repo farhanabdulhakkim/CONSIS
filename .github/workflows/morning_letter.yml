@@ -2,13 +2,14 @@ name: Morning Brief
 
 on:
   schedule:
-    # 00:30 UTC is exactly 6:00 AM IST
     - cron: '30 0 * * *'
-  workflow_dispatch: # Allows you to test it manually via a button
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to save the HTML file
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -21,10 +22,18 @@ jobs:
       - name: Install Dependencies
         run: pip install requests groq secure-smtplib
         
-      - name: Run Morning Script
+      - name: Run Script (Generates HTML)
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
         run: python main.py
+        
+      - name: Commit and Deploy Dashboard
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          git commit -m "Automated Morning Dashboard Build" || echo "No changes"
+          git push
