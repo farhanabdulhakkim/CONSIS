@@ -1,0 +1,77 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Morning Command Center</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+                body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+                .animate-slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 0.8s ease-out forwards; }
+                @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+                .delay-1 { animation-delay: 0.2s; }
+                .delay-2 { animation-delay: 0.4s; }
+                .delay-3 { animation-delay: 0.6s; }
+                .delay-4 { animation-delay: 0.8s; }
+                .delay-5 { animation-delay: 1.0s; }
+                .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+            </style>
+        </head>
+        <body class="min-h-screen p-6 md:p-12">
+            <div class="max-w-4xl mx-auto">
+                <header class="text-center mb-12 animate-slide-up">
+                    <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
+                    <p class="text-xl text-gray-400 italic">""Discipline is not something you do, it's a mirror that reflects your character - every time you fail to meet your standards, you weaken yourself, and every time you rise above, you strengthen the chains that bind your greatness.""</p>
+                    <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
+                        <span class="text-blue-300 font-bold">Total XP: 10 🏆</span>
+                    </div>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-1">
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🎯 Today's Mission</h2>
+                        <p class="text-lg text-emerald-400 font-medium">Dominate the core habits!</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2">
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 DSA Target</h2>
+                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>Greedy & Bit Manipulation</h3>**Pattern: Sliding Window**
+
+<p class='text-xl text-white'>Minimum Size Subarray Sum</p><p class='text-gray-400'>When implementing the two-pointer technique, make sure to adjust both pointers symmetrically to avoid getting stuck in an infinite loop.</p>
+
+**Pattern:** Two Pointers
+
+<p class='text-xl text-white'>Intersection of Two Arrays</p><p class='text-gray-400'>Carefully decide the direction to advance the pointer based on the conditions of the problem, either advance both or only one pointer.</p>
+
+**Pattern:** Binary Search
+
+<p class='text-xl text-white'>Search in Rotated Sorted Array</p><p class='text-gray-400'>Consider the pivot element and decide whether to search in the left or right half of the array.</p>
+
+**Pattern:** Hashing
+
+<p class='text-xl text-white'>Contains Duplicate</p><p class='text-gray-400'>Store the elements encountered in an array and use the array to keep track of elements encountered so far.</p>
+
+**Pattern:** DFS
+
+<p class='text-xl text-white'>Word Search II</p><p class='text-gray-400'>Use a set to keep track of the words found so far to avoid repetition.</p>
+
+**Pattern:** Sort
+
+<p class='text-xl text-white'>Sort Characters By Frequency</p><p class='text-gray-400'>Use a map to count the frequency of each character, and then use a custom comparator to sort the characters based on their frequency.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Sunday</h2>
+                        <p class='text-gray-300'><strong>Rest Day</strong>. Focus on hydration and recovery.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
+                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/02/malaysia-is-reportedly-shutting-down-balaji-srinivasans-network-school/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Malaysia is reportedly shutting down Balaji Srinivasan’s Network School</a></li><li><a href='https://techcrunch.com/2026/08/02/techcrunch-mobility-two-roads-diverged-for-robotaxis/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>TechCrunch Mobility: Two roads diverged — for robotaxis</a></li><li><a href='https://techcrunch.com/2026/08/02/these-app-store-hidden-gems-prove-theres-still-room-for-great-software-in-the-ai-era/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>These App Store hidden gems prove there’s still room for great software in the AI era</a></li><li><a href='https://techcrunch.com/2026/08/01/inside-one-london-founder-house-rewriting-the-founder-house-rules/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Inside the London hacker house taking a stand against founder burnout</a></li><li><a href='https://techcrunch.com/2026/08/01/judge-denies-xais-request-to-block-minnesota-ban-on-nudify-apps/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Judge denies xAI’s request to block Minnesota ban on ‘nudify’ apps</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+        
