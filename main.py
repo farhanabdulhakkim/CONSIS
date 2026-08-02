@@ -4,6 +4,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime
 from groq import Groq
 
@@ -12,128 +13,110 @@ def get_groq_motivation():
     try:
         client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
         chat_completion = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a high-performance coach. Give a short, hard-hitting, 2-sentence motivational quote about discipline and consistency."
-                }
-            ],
+            messages=[{"role": "system", "content": "You are a high-performance coach. Give a short, hard-hitting, 2-sentence motivational quote about discipline."}],
             model="llama-3.1-8b-instant",
         )
         return chat_completion.choices[0].message.content
     except Exception as e:
         return "Discipline equals freedom. Execute the plan."
 
-# --- 2. Fetch Top 5 Tech News (NewsAPI) ---
+# --- 2. Fetch Tech News (TechCrunch RSS) ---
 def get_tech_news():
-    api_key = os.environ.get("NEWS_API_KEY")
-    url = f"https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey={api_key}"
     try:
-        response = requests.get(url)
-        articles = response.json().get("articles", [])[:5]
-        news_html = "<ul style='padding-left: 20px;'>"
-        for article in articles:
-            news_html += f"<li style='margin-bottom: 10px;'><a href='{article['url']}' style='color: #2563eb; text-decoration: none;'>{article['title']}</a></li>"
+        response = requests.get('https://techcrunch.com/feed/')
+        root = ET.fromstring(response.content)
+        news_html = "<ul style='padding-left: 20px; margin: 0;'>"
+        for item in root.findall('./channel/item')[:5]:
+            title = item.find('title').text
+            link = item.find('link').text
+            news_html += f"<li style='margin-bottom: 10px;'><a href='{link}' style='color: #2563eb; text-decoration: none;'>{title}</a></li>"
         news_html += "</ul>"
         return news_html
     except Exception as e:
         return "<p>Could not fetch news today.</p>"
 
-# --- 3. Fetch Competitive Edge (LeetCode) ---
-def get_leetcode_daily():
-    url = "https://leetcode.com/graphql"
-    query = """
-    query questionOfToday {
-        activeDailyCodingChallengeQuestion {
-            link
-            question { title difficulty topicTags { name } }
-        }
+# --- 3. Fetch DSA Pattern (Post-Trie Timetable) ---
+def get_dsa_pattern():
+    # Your brand new timetable
+    patterns = {
+        "Monday": "Graph Traversals (DFS & BFS)",
+        "Tuesday": "Advanced Graphs (Shortest Path, Topological Sort)",
+        "Wednesday": "Backtracking (Permutations, Combinations)",
+        "Thursday": "1D Dynamic Programming",
+        "Friday": "2D Dynamic Programming",
+        "Saturday": "Union Find / Disjoint Sets",
+        "Sunday": "Greedy Algorithms & Bit Manipulation"
     }
-    """
-    try:
-        response = requests.post(url, json={"query": query})
-        data = response.json()["data"]["activeDailyCodingChallengeQuestion"]
-        q_data = data["question"]
-        topics = ", ".join([tag["name"] for tag in q_data["topicTags"]])
-        return {
-            "title": q_data["title"],
-            "difficulty": q_data["difficulty"],
-            "link": "https://leetcode.com" + data["link"],
-            "topics": topics
-        }
-    except Exception as e:
-        return {"title": "Error fetching LeetCode", "difficulty": "N/A", "link": "#", "topics": "N/A"}
-
-# --- 4. Determine Gym Habit (Dynamic via Groq for Commercial Gym) ---
-def get_todays_workout():
-    workouts_focus = {
-        "Monday": "Chest and Biceps",
-        "Tuesday": "Legs and Shoulders",
-        "Wednesday": "Back and Triceps",
-        "Thursday": "Rest Day",
-        "Friday": "Thighs and Biceps", 
-        "Saturday": "Core and Forearms",
-        "Sunday": "Rest Day"
-    }
-    
     today = datetime.today().strftime('%A')
-    focus_for_today = workouts_focus.get(today, "Rest Day")
-
-    if "Rest" in focus_for_today:
-        return f"<p><strong>{focus_for_today}</strong>. Focus on hydration, stretching, and recovery today.</p>"
-
+    pattern = patterns.get(today, "General Review")
+    
     try:
         client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-        prompt = (
-            f"I am working out at a fully equipped commercial gym. Today's target muscle groups are: {focus_for_today}. "
-            "Generate a strict, HTML-formatted unordered list (<ul><li>...</li></ul>) of 5 to 6 exact exercises "
-            "I need to do today to target these specific muscles. Utilize a mix of barbells, machines, cables, and dumbbells. "
-            "Include specific sets and reps (e.g., 4x10). Do not include any intro or outro text, just the HTML list."
-        )
-        
-        chat_completion = client.chat.completions.create(
+        chat = client.chat.completions.create(
             messages=[
-                {
-                    "role": "system", 
-                    "content": "You are a precise, no-nonsense fitness coach. Output only the requested HTML."
-                },
-                {
-                    "role": "user", 
-                    "content": prompt
-                }
+                {"role": "system", "content": "You are a senior technical interviewer. Given a DSA pattern, suggest exactly ONE classic LeetCode problem name and a 1-sentence technical tip. Output ONLY HTML in this format: <p><strong>Problem:</strong> [Name]</p><p><strong>Tip:</strong> [Tip]</p>"},
+                {"role": "user", "content": f"The pattern is: {pattern}"}
             ],
             model="llama-3.1-8b-instant",
         )
-        return chat_completion.choices[0].message.content
-    except Exception as e:
-        return f"<p>Error fetching dynamic workout. Target muscles for today: {focus_for_today}</p>"
+        groq_tip = chat.choices[0].message.content
+        return f"<h3 style='color: #2563eb; margin-top: 0; margin-bottom: 10px;'>{pattern}</h3>{groq_tip}"
+    except Exception:
+        return f"<h3 style='color: #2563eb; margin-top: 0; margin-bottom: 10px;'>{pattern}</h3><p>Focus on this pattern today!</p>"
 
-# --- 5. Scoring System ---
-def manage_score(is_evening_check_in):
-    score_file = "score.txt"
+# --- 4. Fetch Gym Routine ---
+def get_todays_workout():
+    workouts = {"Monday": "Chest and Biceps", "Tuesday": "Legs and Shoulders", "Wednesday": "Back and Triceps", "Thursday": "Rest Day", "Friday": "Thighs and Biceps", "Saturday": "Core and Forearms", "Sunday": "Rest Day"}
+    focus = workouts.get(datetime.today().strftime('%A'), "Rest Day")
+    if "Rest" in focus: return f"<p style='margin: 0;'><strong>{focus}</strong>. Focus on hydration and recovery.</p>"
     try:
-        with open(score_file, "r") as f:
-            current_score = int(f.read().strip())
+        client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        chat = client.chat.completions.create(
+            messages=[{"role": "system", "content": "You are a fitness coach. Output only an HTML list."}, 
+                      {"role": "user", "content": f"At a commercial gym, target: {focus}. Give 5 exercises (barbells/cables/machines) with sets/reps as a <ul style='margin-bottom: 0;'><li> list. No intro."}],
+            model="llama-3.1-8b-instant",
+        )
+        return chat.choices[0].message.content
+    except Exception:
+        return f"<p style='margin: 0;'>Focus today: {focus}</p>"
+
+# --- 5. Fetch Custom Task ---
+def get_custom_focus():
+    try:
+        with open("focus.txt", "r") as f:
+            task = f.read().strip()
+            return task if task else "No specific custom task set. Dominate the core habits!"
     except FileNotFoundError:
-        current_score = 0
-    except ValueError:
+        return "No specific custom task set. Dominate the core habits!"
+
+# --- 6. Dynamic Scoring System ---
+def manage_score(is_evening):
+    try:
+        with open("score.txt", "r") as f:
+            current_score = int(f.read().strip())
+    except:
         current_score = 0
     
-    if is_evening_check_in:
-        current_score += 10 # +10 points for completing the day
-        with open(score_file, "w") as f:
+    points_earned = 0
+    if is_evening:
+        if os.environ.get("DSA_DONE") == "true": points_earned += 10
+        if os.environ.get("GYM_DONE") == "true": points_earned += 10
+        if os.environ.get("DEV_DONE") == "true": points_earned += 15
+        
+        current_score += points_earned
+        with open("score.txt", "w") as f:
             f.write(str(current_score))
             
-    return current_score
+    return current_score, points_earned
 
-# --- 6. Send Email ---
+# --- 7. Send Email ---
 def send_email(is_evening):
-    # Fetch Data
     quote = get_groq_motivation()
     news = get_tech_news()
-    lc_data = get_leetcode_daily()
+    dsa_pattern_html = get_dsa_pattern()
     workout = get_todays_workout()
-    score = manage_score(is_evening)
+    custom_task = get_custom_focus()
+    score, points = manage_score(is_evening)
     
     sender_email = os.environ.get("EMAIL_USER")
     sender_password = os.environ.get("EMAIL_PASS")
@@ -142,73 +125,43 @@ def send_email(is_evening):
     msg['From'] = sender_email
     msg['To'] = sender_email
     
-    # Configure subject and headers based on time of day
     if is_evening:
-        msg['Subject'] = f"✅ Daily Wrap-Up: Score Updated ({score} XP)"
-        header_text = "End of Day Review"
-        action_text = f"<h3 style='color: #10b981;'>+10 XP Earned! Current Consistency Score: {score} XP 🏆</h3>"
+        msg['Subject'] = f"✅ Daily Wrap-Up: +{points} XP Earned! (Total: {score})"
+        header = f"End of Day Review: +{points} XP!"
+        action = f"<h3 style='color: #10b981; margin: 0;'>Total Consistency Score: {score} XP 🏆</h3>"
     else:
         msg['Subject'] = f"🚀 Morning Brief: Mission Start ({score} XP)"
-        header_text = "Good Morning, Farhan!"
-        action_text = f"<h3 style='color: #4f46e5;'>Current Consistency Score: {score} XP 🏆</h3><p style='color: #6b7280; font-size: 0.9em;'><em>Trigger your evening action at midnight to log your points!</em></p>"
+        header = "Good Morning!"
+        action = f"<h3 style='color: #4f46e5; margin: 0;'>Total Consistency Score: {score} XP 🏆</h3><p style='color: #6b7280; font-size: 0.9em; margin-top: 5px; margin-bottom: 0;'><em>Trigger your evening action at midnight to log your points!</em></p>"
 
-    # HTML Email Template
     html = f"""
     <html>
-      <head>
-        <style>
-          body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; padding: 20px; }}
-          .container {{ max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }}
-          .header {{ text-align: center; color: #111827; border-bottom: 2px solid #e5e7eb; padding-bottom: 20px; margin-bottom: 20px; }}
-          h2 {{ color: #374151; margin-top: 25px; border-bottom: 2px solid #f3f4f6; padding-bottom: 8px; font-size: 1.25em; }}
-          .quote-box {{ background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; font-style: italic; font-size: 1.1em; color: #92400e; margin: 20px 0; border-radius: 4px; }}
-          .task-box {{ background: #f9fafb; padding: 15px; border-radius: 8px; border: 1px solid #e5e7eb; margin-bottom: 15px; }}
-          .tag {{ background: #e0e7ff; color: #4338ca; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }}
-          .diff-easy {{ color: #10b981; font-weight: bold; text-transform: capitalize; }}
-          .diff-medium {{ color: #f59e0b; font-weight: bold; text-transform: capitalize; }}
-          .diff-hard {{ color: #ef4444; font-weight: bold; text-transform: capitalize; }}
-          a.btn {{ display: inline-block; background: #2563eb; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; margin-top: 10px; font-weight: bold; }}
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h1>{header_text}</h1>
-          </div>
+      <body style="font-family: 'Segoe UI', Tahoma, sans-serif; background: #f3f4f6; padding: 20px;">
+        <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; padding: 30px;">
+          <h1 style="text-align: center; color: #111827; margin-top: 0;">{header}</h1>
           
-          <div class="quote-box">
-            "{quote}"
-          </div>
+          <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; font-style: italic; margin: 20px 0;">"{quote}"</div>
+          <div style="text-align: center; background: #f0fdf4; border-radius: 8px; padding: 15px; margin-bottom: 20px;">{action}</div>
           
-          <div style="text-align: center; margin: 20px 0; padding: 15px; background: #f0fdf4; border-radius: 8px; border: 1px solid #bbf7d0;">
-            {action_text}
+          <h2 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 5px;">🎯 Today's Custom Focus</h2>
+          <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 1.1em;"><strong>{custom_task}</strong></div>
+
+          <h2 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 5px;">🧠 DSA Pattern of the Day</h2>
+          <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            {dsa_pattern_html}
           </div>
 
-          <h2>📰 Top 5 Tech News</h2>
-          <div class="task-box">
-            {news}
-          </div>
+          <h2 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 5px;">💪 Gym Protocol: {datetime.today().strftime('%A')}</h2>
+          <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">{workout}</div>
 
-          <h2>🧠 Competitive Edge (DSA)</h2>
-          <div class="task-box">
-            <p style="font-size: 1.1em; margin-bottom: 5px;"><strong>{lc_data['title']}</strong></p>
-            <p style="margin-bottom: 10px;"><strong>Difficulty:</strong> <span class="diff-{lc_data['difficulty'].lower()}">{lc_data['difficulty']}</span></p>
-            <p style="margin-bottom: 15px;"><strong>Topics:</strong> <span class="tag">{lc_data['topics']}</span></p>
-            <a href="{lc_data['link']}" class="btn">Solve on LeetCode</a>
-          </div>
-
-          <h2>💪 Gym Protocol: {datetime.today().strftime('%A')}</h2>
-          <div class="task-box">
-            {workout}
-          </div>
-          
+          <h2 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 5px;">📰 Top 5 Tech News</h2>
+          <div style="background: #f9fafb; padding: 15px; border-radius: 8px;">{news}</div>
         </div>
       </body>
     </html>
     """
-
     msg.attach(MIMEText(html, 'html'))
-
+    
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
@@ -217,12 +170,8 @@ def send_email(is_evening):
         server.quit()
         print("Email sent successfully!")
     except Exception as e:
-        print(f"Error sending email: {e}")
+        print(f"Failed to send email: {e}")
 
 if __name__ == "__main__":
-    # If script is run with 'python main.py --evening', it adds points and sends evening wrap-up
     is_evening = len(sys.argv) > 1 and sys.argv[1] == "--evening"
-    
-    print("Initiating build sequence...")
     send_email(is_evening)
-    print("Execution complete.")
