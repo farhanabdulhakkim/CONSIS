@@ -1,0 +1,30 @@
+name: Morning Brief
+
+on:
+  schedule:
+    # 00:30 UTC is exactly 6:00 AM IST
+    - cron: '30 0 * * *'
+  workflow_dispatch: # Allows you to test it manually via a button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.10'
+          
+      - name: Install Dependencies
+        run: pip install requests groq secure-smtplib
+        
+      - name: Run Morning Script
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        run: python main.py

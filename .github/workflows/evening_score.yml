@@ -1,0 +1,37 @@
+name: Evening Check-in & Score Update
+
+on:
+  workflow_dispatch: # Manual trigger so you only get points if you actually did the work
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit the new score back to your repo
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.10'
+          
+      - name: Install Dependencies
+        run: pip install requests groq secure-smtplib
+        
+      - name: Update Score and Send Evening Email
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        run: python main.py --evening
+      
+      - name: Commit new score to Repository
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add score.txt
+          git commit -m "Update consistency score (+10 XP)" || echo "No changes to commit"
+          git push
