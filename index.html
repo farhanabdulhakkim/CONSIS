@@ -22,7 +22,7 @@
             <div class="max-w-4xl mx-auto">
                 <header class="text-center mb-12 animate-slide-up">
                     <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
-                    <p class="text-xl text-gray-400 italic">""Discipline is not a restriction, it's a liberator - it's the difference between watching your dreams unfold or wondering what could've been. It's not about being perfect, it's about being consistent: every rep, every practice, every decision is a chance to prove that you're worthy of achieving greatness.""</p>
+                    <p class="text-xl text-gray-400 italic">""Discipline is the unwavering fire that fuels your pursuit of greatness, burning away excuses and driving you forward with unrelenting determination. It's not a restriction, but a liberator – freeing you from the burdens of mediocrity and unleashing your untapped potential.""</p>
                     <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
                         <span class="text-blue-300 font-bold">Total XP: 45 🏆</span>
                     </div>
@@ -36,24 +36,35 @@
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2">
                         <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 DSA Target</h2>
-                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>Backtracking</h3><p class='text-xl text-white'>Median of Two Sorted Arrays</p>
-<p class='text-gray-400'>Use two pointers to track the current elements of the two arrays and perform binary search to find the median efficiently.</p>
+                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>1D Dynamic Programming</h3><h2>Problem: Longest Increasing Subsequence (LIS)</h2>
+<p class='text-xl text-white'>Given an integer array nums, return the length of the longest subsequence that is a valid increasing subsequence.</p>
+<p class='text-gray-400'>Tip: Try to create and maintain a dynamic programming table with dp[i] representing the longest increasing subsequence ending at index i.</p>
+
+<h2>Problem: Coin Change (Coin Change I)</h2>
+<p class='text-xl text-white'>Given an integer amount and a list of coins, return the fewest number of coins that you need to make up that amount, if the amount is impossible to be paid with the given coins, return -1.</p>
+<p class='text-gray-400'>Tip: Initialize dp with amount+1 elements and use bottom-up dynamic programming to fill in the dp table efficiently.</p>
+
+<h2>Problem: Climbing Stairs</h2>
+<p class='text-xl text-white'>Climbing Stairs is another dynamic programming problem to get the number of ways you can climb a staircase. The staircase has 3 steps to climb with 1, 2 or 3 steps for climbing.</p>
+<p class='text-gray-400'>Tip: Define dp array where dp[i] will store the number of ways to climb to i, then for i = 2 to n, update dp[i] with the sum of dp[i-1], dp[i-2] and dp[i-3] for 3-step, 2-step and 1-step respectively.</p>
+
+<h2>Problem: Best Time to Buy and Sell Stock (Best Time to Buy and Sell Stock I)</h2>
+<p class='text-xl text-white'>You are given an array prices where prices[i] is the price of a given stock on the ith day.</p>
+<p class='text-gray-400'>Tip: Initialize max_profit as 0, iterate over the array to find two elements and compute the difference between them if current profit is greater than max_profit.</p>
+
+<h2>Problem: Longest Common Subsequence (LCS)</h2>
+<p class='text-xl text-white'>Given two strings text1 and text2, return the length of their longest common subsequence.</p>
+<p class='text-gray-400'>Tip: Initialize dp array for the length of the strings with 0s, fill dp array by checking characters of both strings, dp[i][j] = dp[i-1][j-1] if strings characters match otherwise dp[i][j] = 0.</p>
                     </div>
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Wednesday</h2>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-1">
-  <li>Bent Over Barbell Row (3 sets of 8-12 reps) - Targets the Latissimus Dorsi</li>
-  <li>Cable Lateral Raise (3 sets of 12-15 reps) - Targets the Triceps</li>
-  <li>Close Grip Bench Press (3 sets of 8-12 reps) - Targets the Triceps</li>
-  <li>Pull-Ups (3 sets to failure) - Targets the Latissimus Dorsi and Trapezius</li>
-  <li>Skull Crushers (3 sets of 10-15 reps) - Targets the Triceps</li>
-</ul>
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Thursday</h2>
+                        <p class='text-gray-300'><strong>Rest Day</strong>. Focus on hydration and recovery.</p>
                     </div>
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
                         <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
-                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/04/elon-musk-repeatedly-one-upped-his-execs-on-spacexs-first-earnings-call/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Elon Musk repeatedly one-upped his execs on SpaceX’s first earnings call</a></li><li><a href='https://techcrunch.com/2026/08/04/lucids-turnaround-plan-hinges-on-1-4b-in-cash-savings-robotaxis/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Lucid’s turnaround plan hinges on $1.4B in cash savings, robotaxis</a></li><li><a href='https://techcrunch.com/2026/08/04/how-to-get-the-best-hotel-deals-for-techcrunch-disrupt-2026/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>How to get the best hotel deals for TechCrunch Disrupt 2026 </a></li><li><a href='https://techcrunch.com/2026/08/04/spacex-has-bought-329m-worth-of-tesla-megapacks-so-far-this-year/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>SpaceX has bought $329M worth of Tesla Megapacks so far this year</a></li><li><a href='https://techcrunch.com/2026/08/04/spacex-doubles-revenues-on-anthropic-and-google-compute-deals-starlink-growth/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>SpaceX doubles revenue on Anthropic and Google compute deals, Starlink growth</a></li></ul>
+                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/05/get-up-to-400-off-your-techcrunch-disrupt-2026-pass-until-friday/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Get up to $400 off your TechCrunch Disrupt 2026 pass until Friday</a></li><li><a href='https://techcrunch.com/2026/08/05/nikita-bier-steps-down-as-xs-head-of-product/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Nikita Bier steps down as X’s head of product</a></li><li><a href='https://techcrunch.com/2026/08/05/travis-kalanicks-robotics-startup-atoms-taps-former-uber-finance-chief-as-cfo/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Travis Kalanick’s robotics startup Atoms taps former Uber finance chief as CFO</a></li><li><a href='https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Meta launches Muse Code, an AI agent for large code bases</a></li><li><a href='https://techcrunch.com/2026/08/05/trumps-doj-gains-oversight-of-openais-green-card-employee-sponsorships/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Trump’s DOJ gains oversight of OpenAI’s green-card employee sponsorships</a></li></ul>
                     </div>
                 </div>
             </div>
