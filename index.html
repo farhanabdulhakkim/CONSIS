@@ -22,7 +22,7 @@
             <div class="max-w-4xl mx-auto">
                 <header class="text-center mb-12 animate-slide-up">
                     <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
-                    <p class="text-xl text-gray-400 italic">""Discipline is not something you have, it's something you are - it's the unwavering fire that burns inside every champion. When you show up early, work hard, and give your all, discipline becomes the armor that transforms your weakest moments into the greatest triumphs of your life.""</p>
+                    <p class="text-xl text-gray-400 italic">""Discipline isn't about following rules, it's about rewiring your brain to achieve greatness; every time you choose to do what's hard, you're not just building a better you, you're unleashing a force that can change the game.""</p>
                     <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
                         <span class="text-blue-300 font-bold">Total XP: 45 🏆</span>
                     </div>
@@ -36,84 +36,38 @@
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2">
                         <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 DSA Target</h2>
-                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>2D Dynamic Programming</h3><h3>Problem: Valid Palindrome</h3>
-<p class='text-xl text-white'>Sanjeev Singh</p>
-<p class='text-gray-400'>This problem tests case sensitivity and your understanding of what makes a string a palindrome. It's a good exercise to practice handling edge cases.</p>
+                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>Union Find</h3>**Binary Search Pattern**
 
-Given two string s1 and s2, return whether s1 could be sorted as s2.
-
-<h3>Description</h3>
-<p class='text-gray-400'>The string s2 can be obtained from s1 by sorting its characters and removing duplicate letters. If there are two or more instances of the same character in s1, you can only keep one in s2. If s1 does not contain all the characters in s2 or the counts of the same characters in s2 is more than s1 then return false else return true.</p>
-
-<h3>Constraints</h3>
-<ul>
-  <li>1 <= s1.length, s2.length <= 5 * 10^5</li>
-  <li>s1 and s2 consist of lowercase English letters.</li>
-</ul>
-
-<h3>Solution</h3>
-<p class='text-gray-400'>The problem requires a two pass solution where the first pass is to count the frequency of each character in the string s1. The second pass is to traverse s2 and at each character compare its frequency in s1 is greater or equal than the s2 then decrement the count else return false. At the end of the traversal if no false is returned then return true.</p>
-
-<h3>Example</h3>
-<p class='text-gray-400'>Example 1:
-Input: s1 = "dcab", s2 = "baca"
-Output: true
-Explanation: Sort string s1 "dcab" will result in "abcdc" and sorting s2 "baca" will also result in "abcda".</p>
+<p class='text-xl text-white'>Search a 2D Matrix II</p>
+<p class='text-gray-400'>Tip: To solve this problem efficiently, think of how the matrix can be transformed into a 1D array and apply binary search on the transformed array, and remember to use the row and col indices correctly.</p>
                     </div>
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Friday</h2>
+                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Saturday</h2>
                         <ul class='list-disc pl-5 text-gray-300 space-y-1'>
-  <li>
-    <strong>Barbell Squats (Thighs)</strong>
-    <ul class="list-disc pl-7 text-gray-300 space-y-1">
-      <li>
-        3 sets of 8-12 reps
-      </li>
-      <li>
-        2 sets of 10-15 reps with less weight
-      </li>
+  <li>Bicycle Crunches (Machine) 
+    <ul class='list-inside pl-3 space-y-1'>
+      <li>3 sets, 12-15 reps</li>
     </ul>
   </li>
-  <li>
-    <strong>Standing Leg Press (Thighs)</strong>
-    <ul class="list-disc pl-7 text-gray-300 space-y-1">
-      <li>
-        3 sets of 10-12 reps
-      </li>
-      <li>
-        Warm-up sets of 5-6 reps
-      </li>
+  <li>Barbell Reverse Crunch (Barbell) 
+    <ul class='list-inside pl-3 space-y-1'>
+      <li>3 sets, 10-12 reps</li>
     </ul>
   </li>
-  <li>
-    <strong>Cable Lateral Raise (Biceps not actually targeted - see alternative)</strong>
-    <ul class="list-disc pl-7 text-gray-300 space-y-1">
-      <li>
-        Alternative exercise: Cable Hamstring Curls (for Biceps)
-      </li>
+  <li>Russian Twists (Machine) 
+    <ul class='list-inside pl-3 space-y-1'>
+      <li>3 sets, 15-18 reps</li>
     </ul>
   </li>
-  <li>
-    <strong>Barbell Bicep Curls</strong>
-    <ul class="list-disc pl-7 text-gray-300 space-y-1">
-      <li>
-        3 sets of 8-12 reps
-      </li>
-      <li>
-        2 sets of 10-15 reps with less weight
-      </li>
+  <li>Wrist Curls (Barbell/Cable) 
+    <ul class='list-inside pl-3 space-y-1'>
+      <li>3 sets, 15-18 reps</li>
     </ul>
   </li>
-  <li>
-    <strong>Dumbbell Hammer Curls (Biceps)</strong>
-    <ul class="list-disc pl-7 text-gray-300 space-y-1">
-      <li>
-        3 sets of 8-12 reps
-      </li>
-      <li>
-        2 sets of 10-15 reps with less weight
-      </li>
+  <li>Wrist Extensions (Machine) 
+    <ul class='list-inside pl-3 space-y-1'>
+      <li>3 sets, 12-15 reps</li>
     </ul>
   </li>
 </ul>
@@ -121,7 +75,7 @@ Explanation: Sort string s1 "dcab" will result in "abcdc" and sorting s2 "baca" 
 
                     <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
                         <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
-                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/06/openais-new-ai-smart-speaker-will-reportedly-sell-for-between-300-and-400/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>OpenAI’s new AI smart speaker will reportedly sell for between $300 and $400</a></li><li><a href='https://techcrunch.com/2026/08/06/your-table-awaits-exhibit-at-techcrunch-disrupt-2026-to-be-seen-by-thousands/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Your table awaits: Exhibit at TechCrunch Disrupt 2026 to be seen by thousands </a></li><li><a href='https://techcrunch.com/2026/08/06/vogue-just-gave-another-nod-of-approval-to-the-tech-world/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Vogue just gave another nod of approval to the tech world</a></li><li><a href='https://techcrunch.com/2026/08/06/get-up-to-400-off-your-techcrunch-disrupt-2026-pass-until-friday/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Get up to $400 off your TechCrunch Disrupt 2026 pass until tomorrow</a></li><li><a href='https://techcrunch.com/2026/08/06/google-says-hackers-are-calling-financial-firm-employees-to-hack-and-extort-victims/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Google says hackers are calling financial firm employees to hack and extort victims</a></li></ul>
+                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>OpenAI says it slowed Astra model development over security concerns</a></li><li><a href='https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>After Rippling blew millions on AI in months, it built an employee ROI tool</a></li><li><a href='https://techcrunch.com/2026/08/07/wacoms-movinkpad-11-is-a-fun-and-mid-priced-entry-point-for-digital-artists/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Wacom’s MovinkPad 11 is a fun, midpriced entry point for digital artists</a></li><li><a href='https://techcrunch.com/2026/08/07/security-researchers-scanned-the-polish-web-and-found-courts-hospitals-and-airports-at-risk-of-hacks/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Security researchers scanned the Polish web and found courts, hospitals, and airports at risk of hacks</a></li><li><a href='https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Cloudflare launches Kitesurf, a browser built for AI agents</a></li></ul>
                     </div>
                 </div>
             </div>
