@@ -7,11 +7,11 @@
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Sliding Window can skip unnecessary iterations with Two Pointers",
-    "trigger_variant": "A sorted array where target sum is unknown, but window size is fixed",
-    "gotcha": "Forgetting that Two Pointers can expand or shrink based on the problem",
-    "one_liner": "Two Pointers are Sliding Window's superpower in sorted arrays",
-    "diagram_hint": "Two Pointers moving inwards from both ends, meeting in the middle"
+    "headline_takeaway": "Consider edge cases when implementing Sliding Window.",
+    "trigger_variant": "Two arrays with non-contiguous elements: find common prefix",
+    "gotcha": "Forgetting to reset the window when the required element is found.",
+    "one_liner": "Sliding Window: Don't recompute everything, just advance the window.",
+    "diagram_hint": "Overlapping windows with shrinking and expanding edges."
   },
   "streak": 1,
   "best_streak": 1,
