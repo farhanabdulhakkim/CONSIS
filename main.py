@@ -165,67 +165,6 @@ def execute_pipeline(is_evening):
     if not dashboard_url or dashboard_url == "#":
         dashboard_url = default_url
 
-    # Generate Animated index.html Command Center
-    dashboard_html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONSIS v2.0 — Morning Command Center</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {{ background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }}
-        .animate-slide-up {{ opacity: 0; transform: translateY(20px); animation: slideUp 0.8s ease-out forwards; }}
-        @keyframes slideUp {{ to {{ opacity: 1; transform: translateY(0); }} }}
-        .delay-1 {{ animation-delay: 0.2s; }}
-        .delay-2 {{ animation-delay: 0.4s; }}
-        .delay-3 {{ animation-delay: 0.6s; }}
-        .delay-4 {{ animation-delay: 0.8s; }}
-        .glass-card {{ background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }}
-    </style>
-</head>
-<body class="min-h-screen p-6 md:p-12">
-    <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-12 animate-slide-up">
-            <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
-            <p class="text-xl text-gray-400 italic">"{quote}"</p>
-            <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
-                <span class="text-blue-300 font-bold">Total XP: {score} 🏆</span>
-            </div>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-1">
-                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🎯 Today's Mission</h2>
-                <p class="text-lg text-emerald-400 font-medium">{custom_task}</p>
-            </div>
-
-            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2 md:col-span-2">
-                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 Daily DSA Revision (Dual-Pattern)</h2>
-                {revision_html}
-            </div>
-
-            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
-                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: {today_name}</h2>
-                {workout}
-            </div>
-
-            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
-                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
-                {news}
-            </div>
-        </div>
-    </div>
-</body>
-</html>"""
-
-    # Save to both index.html and docs/index.html
-    with open("index.html", "w", encoding="utf-8") as f:
-        f.write(dashboard_html)
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/index.html", "w", encoding="utf-8") as f:
-        f.write(dashboard_html)
-
     # Handle Email Dispatch
     if sender_email and sender_password:
         msg = MIMEMultipart()
