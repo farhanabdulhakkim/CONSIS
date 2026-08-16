@@ -1,80 +1,59 @@
-
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Morning Command Center</title>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <style>
-                body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-                .animate-slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 0.8s ease-out forwards; }
-                @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-                .delay-1 { animation-delay: 0.2s; }
-                .delay-2 { animation-delay: 0.4s; }
-                .delay-3 { animation-delay: 0.6s; }
-                .delay-4 { animation-delay: 0.8s; }
-                .delay-5 { animation-delay: 1.0s; }
-                .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-            </style>
-        </head>
-        <body class="min-h-screen p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <header class="text-center mb-12 animate-slide-up">
-                    <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
-                    <p class="text-xl text-gray-400 italic">""Discipline is not something you do, it's who you are - it's the unwavering commitment to your goals, even when the voice of resistance screams loudest." 
-
-"It's not the absence of temptation that makes a champion, it's the strength of character to resist it every time.""</p>
-                    <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
-                        <span class="text-blue-300 font-bold">Total XP: 45 🏆</span>
-                    </div>
-                </header>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-1">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🎯 Today's Mission</h2>
-                        <p class="text-lg text-emerald-400 font-medium">Coding</p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 DSA Target</h2>
-                        <h3 class='text-2xl font-bold text-blue-500 mb-2'>Greedy & Bit Manipulation</h3>Let's say the DSA pattern is "String Exploration". 
-
-Here's a classic LeetCode problem:
-<p class='text-xl text-white'>Valid Palindrome</p><p class='text-gray-400'>Consider only the alphanumeric characters of the string while checking if it's a palindrome.</p>
-
-Or, if the pattern is "Dynamic Programming". 
-
-Here's a classic LeetCode problem:
-<p class='text-xl text-white'>Longest Increasing Path in a Matrix</p><p class='text-gray-400'>Use memoization to store the lengths of the longest increasing paths ending at each cell.</p>
-
-Or, if the pattern is "Graph Traversal". 
-
-Here's a classic LeetCode problem:
-<p class='text-xl text-white'>Clone Graph</p><p class='text-gray-400'>Use Breadth-First Search (BFS) to traverse the graph and create clones of the nodes.</p>
-
-Or, if the pattern is "Greedy Algorithm".
-
-Here's a classic LeetCode problem:
-<p class='text-xl text-white'>Coin Change</p><p class='text-gray-400'>Sort the coin denominations in decreasing order and use a greedy approach to fill the total amount as efficiently as possible.</p>
-
-Or, if the pattern is "Backtracking".
-
-Here's a classic LeetCode problem:
-<p class='text-xl text-white'>N-Queens</p><p class='text-gray-400'>Use backtracking to try all possible placements of the queens, ensuring that no two queens collide on the same row, column, or diagonal.</p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Sunday</h2>
-                        <p class='text-gray-300'><strong>Rest Day</strong>. Focus on hydration and recovery.</p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
-                        <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
-                        <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Woman claims her stepfather used Grok to transform childhood photo into explicit imagery</a></li><li><a href='https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Anthropic shares more details about how Claude’s new watermarks will work</a></li><li><a href='https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>SpaceX officially closes its Cursor acquisition</a></li><li><a href='https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>How to tell if your AI platforms’ accounts have been hacked</a></li><li><a href='https://techcrunch.com/2026/08/15/every-fusion-startup-that-has-raised-over-100m/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Every fusion startup that has raised over $100M</a></li></ul>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSIS v2.0 — Morning Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .animate-slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 0.8s ease-out forwards; }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-12 animate-slide-up">
+            <h1 class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">Good Morning.</h1>
+            <p class="text-xl text-gray-400 italic">""Discipline isn't something you achieve, it's who you are. Consistency breeds champions, and it's not just a daily choice, it's a permanent mindset that decides your future.""</p>
+            <div class="mt-6 inline-block bg-blue-900/50 border border-blue-500/30 rounded-full px-6 py-2">
+                <span class="text-blue-300 font-bold">Total XP: 45 🏆</span>
             </div>
-        </body>
-        </html>
-        
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-1">
+                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🎯 Today's Mission</h2>
+                <p class="text-lg text-emerald-400 font-medium">Coding</p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-2 md:col-span-2">
+                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">🧠 Daily DSA Revision (Dual-Pattern)</h2>
+                
+    <div class="mb-4">
+        <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="bg-emerald-900/60 text-emerald-400 font-mono text-xs px-3 py-1 rounded-full font-bold border border-emerald-500/30">Week 1 · Day 2 of 7</span>
+            <span class="bg-blue-900/60 text-blue-300 font-mono text-xs px-3 py-1 rounded-full font-bold border border-blue-500/30">Sliding Window &amp; Two Pointers</span>
+        </div>
+        <h3 class="text-xl font-bold text-amber-400 mb-3">💡 Distinguish between identical and non-identical elements in the window.</h3>
+    </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-3 md:col-span-2">
+                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">💪 Gym Protocol: Sunday</h2>
+                <p class='text-gray-300'><strong>Rest Day</strong>. Focus on hydration, stretching, and recovery today.</p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 shadow-xl animate-slide-up delay-4 md:col-span-2">
+                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">📰 Tech Radar</h2>
+                <ul class='list-disc pl-5 space-y-2'><li><a href='https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Woman claims her stepfather used Grok to transform childhood photo into explicit imagery</a></li><li><a href='https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Anthropic shares more details about how Claude’s new watermarks will work</a></li><li><a href='https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>SpaceX officially closes its Cursor acquisition</a></li><li><a href='https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>How to tell if your AI platforms’ accounts have been hacked</a></li><li><a href='https://techcrunch.com/2026/08/15/every-fusion-startup-that-has-raised-over-100m/' target='_blank' class='text-blue-400 hover:text-blue-300 transition-colors'>Every fusion startup that has raised over $100M</a></li></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

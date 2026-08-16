@@ -7,11 +7,11 @@
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Anchor on Sliding Window's fixed-size moving view",
-    "trigger_variant": "Array with non-uniformly distributed, non-contiguous elements",
-    "gotcha": "Failing to reset the window when the pattern's conditions change",
-    "one_liner": "Fixed-size, moving view: slide, don't shift!",
-    "diagram_hint": "Sliding window with varying sizes, highlighting boundary moves"
+    "headline_takeaway": "Distinguish between identical and non-identical elements in the window.",
+    "trigger_variant": "A sorted array with duplicate values, where order doesn't matter.",
+    "gotcha": "Forgetting to reset the pointers when the window moves.",
+    "one_liner": "Slide or shrink, don't skip elements.",
+    "diagram_hint": "Two pointers, one fixed, one moving, highlighting potential swaps."
   },
   "streak": 1,
   "best_streak": 1,
