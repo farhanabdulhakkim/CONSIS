@@ -16,11 +16,11 @@
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Use Two Pointers when sorted order is broken.",
-    "trigger_variant": "Trigger Variant: Find the first duplicate in an array that has duplicate values, where order matters.",
-    "gotcha": "Gotcha: Don't assume sorted order is always preserved when using Two Pointers.",
-    "one_liner": "Two Pointers dance through sorted chaos.",
-    "diagram_hint": "Two arrows moving towards each other, stopping at first mismatch."
+    "headline_takeaway": "Sliding Window can skip unnecessary iterations with Two Pointers",
+    "trigger_variant": "A sorted array where target sum is unknown, but window size is fixed",
+    "gotcha": "Forgetting that Two Pointers can expand or shrink based on the problem",
+    "one_liner": "Two Pointers are Sliding Window's superpower in sorted arrays",
+    "diagram_hint": "Two Pointers moving inwards from both ends, meeting in the middle"
   },
   "history": [
     {
