@@ -1,0 +1,39 @@
+{
+  "cycle_day_index": 1,
+  "streak": 1,
+  "best_streak": 1,
+  "last_run_date": "2026-08-16",
+  "roadmap_position": {
+    "week_number": 1,
+    "day_in_week": 2,
+    "cycle_number": 1
+  },
+  "today": {
+    "date": "2026-08-16",
+    "week_number": 1,
+    "day_in_week": 2,
+    "cycle_number": 1,
+    "primary": "Sliding Window",
+    "subsidiary": "Two Pointers",
+    "focus": "anchor_drill",
+    "headline_takeaway": "Adjust Two Pointers' step size based on Sliding Window's rate.",
+    "trigger_variant": "Sliding Window's size is a multiple of Two Pointers' increment.",
+    "gotcha": "Failing to adjust the Two Pointers' increment when Sliding Window's rate changes.",
+    "one_liner": "Shrink or expand Two Pointers at the window's rate.",
+    "diagram_hint": "Two Pointers with arrows showing variable increment, Sliding Window box."
+  },
+  "history": [
+    {
+      "date": "2026-08-16",
+      "week_number": 1,
+      "day_in_week": 1,
+      "cycle_number": 1,
+      "primary": "Sliding Window",
+      "subsidiary": "Two Pointers",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable"
+    }
+  ]
+}

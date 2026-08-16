@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONSIS — Daily Revision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0d12;
+    --panel:#10151d;
+    --panel-2:#141b25;
+    --border:#1c2430;
+    --text:#e6edf3;
+    --muted:#7d8894;
+    --anchor:#34d399;
+    --anchor-dim:#173a2c;
+    --support:#38bdf8;
+    --support-dim:#12293a;
+    --xp:#f5b942;
+    --radius:14px;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --sans:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #0f1c17 0%, transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, #0d1a24 0%, transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:28px 20px 80px;}
+
+  /* ---- top bar ---- */
+  .topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:26px;}
+  .logo{font-family:var(--mono); font-weight:800; font-size:1.05rem; letter-spacing:0.02em;}
+  .logo span{color:var(--anchor);}
+  .stats{display:flex; gap:10px; font-family:var(--mono); font-size:0.8rem;}
+  .pill{background:var(--panel); border:1px solid var(--border); border-radius:100px; padding:6px 12px; color:var(--muted);}
+  .pill b{color:var(--xp); font-weight:700;}
+
+  /* ---- hero: today's diagram ---- */
+  .hero{
+    background:linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:26px 24px 20px;
+    margin-bottom:22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .eyebrow{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;}
+  .eyebrow b{color:var(--anchor);}
+  #diagram{width:100%; height:auto; display:block; margin:6px auto 14px;}
+  .node-label{font-family:var(--mono); font-weight:700; font-size:15px;}
+  .trace{stroke-dasharray:400; stroke-dashoffset:400; animation:draw 1.4s ease forwards 0.2s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .node-box{fill:var(--panel); stroke-width:2;}
+  .headline{
+    font-family:var(--mono); font-weight:600; font-size:1.05rem; line-height:1.5;
+    color:var(--text); border-left:3px solid var(--xp); padding-left:14px; margin-top:6px;
+  }
+
+  /* ---- content cards ---- */
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px 22px; margin-bottom:16px;
+  }
+  .card h3{
+    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 10px;
+  }
+  .card p{margin:0 0 10px; line-height:1.6; font-size:0.97rem;}
+  .card p:last-child{margin-bottom:0;}
+  .card.anchor{border-left:3px solid var(--anchor);}
+  .card.support{border-left:3px solid var(--support);}
+  .card.bridge{border-left:3px solid var(--xp);}
+  .tag{display:inline-block; font-family:var(--mono); font-size:0.72rem; padding:3px 9px; border-radius:6px; margin-bottom:10px;}
+  .tag.anchor{background:var(--anchor-dim); color:var(--anchor);}
+  .tag.support{background:var(--support-dim); color:var(--support);}
+
+  /* ---- 3-step trigger test ---- */
+  .trigger-test{display:grid; gap:10px;}
+  .step{
+    display:flex; gap:12px; align-items:flex-start; background:var(--panel-2);
+    border:1px solid var(--border); border-radius:10px; padding:12px 14px; cursor:pointer;
+    transition:border-color 0.2s;
+  }
+  .step:hover{border-color:var(--anchor);}
+  .step .num{font-family:var(--mono); font-weight:800; color:var(--anchor); font-size:0.85rem; flex-shrink:0;}
+  .step .body{font-size:0.9rem; color:var(--muted); line-height:1.5;}
+  .step.open .body{color:var(--text);}
+
+  /* ---- roadmap rail ---- */
+  .rail-title{font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin:26px 0 12px;}
+  .rail{display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; scrollbar-width:thin;}
+  .chip{
+    flex-shrink:0; font-family:var(--mono); font-size:0.75rem; padding:8px 12px; border-radius:10px;
+    border:1px solid var(--border); background:var(--panel); color:var(--muted); white-space:nowrap;
+  }
+  .chip.done{color:var(--anchor); border-color:var(--anchor-dim);}
+  .chip.active{color:var(--bg); background:var(--anchor); border-color:var(--anchor); font-weight:700;}
+
+  footer{text-align:center; margin-top:36px; font-family:var(--mono); font-size:0.75rem; color:var(--muted);}
+
+  @media (max-width:560px){
+    .topbar{flex-direction:column; align-items:flex-start; gap:10px;}
+    .headline{font-size:0.95rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="logo">CONSIS <span>// revision</span></div>
+    <div class="stats">
+      <div class="pill">streak <b id="streakVal">—</b></div>
+      <div class="pill">best <b id="bestVal">—</b></div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Week <span id="weekNum">—</span> · Day <span id="dayNum">—</span> of 7 · <b id="focusLabel">—</b></div>
+    <svg id="diagram" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="headline" id="headline">Loading today's revision…</div>
+  </div>
+
+  <div id="cards"></div>
+
+  <div class="card">
+    <h3>3-Step Trigger Test</h3>
+    <div class="trigger-test" id="triggerTest">
+      <div class="step" data-a="Can you draw the diagram from the chart on a blank napkin in under 10 seconds?">
+        <div class="num">01</div><div class="body">Visual Trigger — tap to reveal</div>
+      </div>
+      <div class="step" data-a="Can you state the core mechanism without code jargon?">
+        <div class="num">02</div><div class="body">Plain-English Rule — tap to reveal</div>
+      </div>
+      <div class="step" data-a="What small change in this problem breaks the Primary pattern and forces the Subsidiary pattern?">
+        <div class="num">03</div><div class="body">Boundary Switch — tap to reveal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail-title">8-Week Roadmap</div>
+  <div class="rail" id="rail"></div>
+
+  <footer>generated daily by Groq · CONSIS v2.0</footer>
+</div>
+
+<script>
+const ROADMAP = [
+  "Sliding Window","Prefix Sum","Monotonic Stack","Top K (Heaps)",
+  "BFS","DFS","Matrix Traversal","DP Patterns"
+];
+
+const FOCUS_LABELS = {
+  anchor_deep_dive:"Anchor Deep Dive", anchor_drill:"Anchor Drill",
+  subsidiary_deep_dive:"Support Deep Dive", connection_bridge:"Connection Bridge",
+  mixed_problem:"Mixed Problem", recall_test:"Recall Test",
+  next_week_preview:"Next Week Preview"
+};
+
+function drawDiagram(primary, subsidiary){
+  const svg = document.getElementById('diagram');
+  svg.innerHTML = `
+    <rect x="30" y="55" width="210" height="50" rx="10" class="node-box" stroke="var(--anchor)"/>
+    <text x="135" y="86" text-anchor="middle" class="node-label" fill="var(--anchor)">${primary}</text>
+    <rect x="460" y="55" width="210" height="50" rx="10" class="node-box" stroke="var(--support)"/>
+    <text x="565" y="86" text-anchor="middle" class="node-label" fill="var(--support)">${subsidiary}</text>
+    <path d="M240,80 C320,80 380,80 460,80" fill="none" stroke="var(--xp)" stroke-width="2"
+          stroke-dasharray="6 6" class="trace" marker-end="url(#arrow)"/>
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="var(--xp)"/>
+      </marker>
+    </defs>
+  `;
+}
+
+function renderCards(entry){
+  const c = document.getElementById('cards');
+  c.innerHTML = '';
+  const add = (cls, tagText, title, body) => {
+    c.innerHTML += `<div class="card ${cls}">
+      ${tagText ? `<span class="tag ${cls}">${tagText}</span>` : ''}
+      <h3>${title}</h3>${body}</div>`;
+  };
+
+  switch(entry.focus){
+    case 'anchor_deep_dive':
+    case 'anchor_drill':
+      add('anchor','anchor', entry.primary,
+        `<p>${entry.visual_trigger || entry.trigger_variant || ''}</p>
+         <p>${entry.plain_rule || entry.gotcha || ''}</p>
+         ${entry.worked_micro_example ? `<p><em>${entry.worked_micro_example}</em></p>` : ''}
+         ${entry.one_liner ? `<p><strong>${entry.one_liner}</strong></p>` : ''}`);
+      break;
+    case 'subsidiary_deep_dive':
+      add('support','support', entry.subsidiary,
+        `<p>${entry.visual_trigger || ''}</p><p>${entry.plain_rule || ''}</p>
+         <p><em>${entry.worked_micro_example || ''}</em></p>`);
+      break;
+    case 'connection_bridge':
+      add('bridge','', 'Connection Bridge',
+        `<p>${entry.connection_bridge || ''}</p>`);
+      add('bridge','', 'Boundary Switch',
+        `<p>${entry.boundary_switch || ''}</p>`);
+      break;
+    case 'mixed_problem':
+      add('bridge','', 'Mixed Problem',
+        `<p>${entry.problem_statement || ''}</p>
+         <p><strong>Which pattern first:</strong> ${entry.which_pattern_first || ''}</p>
+         <p><em>${entry.solution_sketch || ''}</em></p>`);
+      break;
+    case 'recall_test':
+      add('bridge','', 'Recall Test',
+        `<p><strong>Q:</strong> ${entry.quiz_question || ''}</p>
+         <p><strong>A:</strong> ${entry.quiz_answer || ''}</p>
+         <p><em>${entry.confidence_tip || ''}</em></p>`);
+      break;
+    case 'next_week_preview':
+      add('support','support', 'Coming Up',
+        `<p>${entry.teaser_line || ''}</p><p><em>${entry.why_it_follows || ''}</em></p>`);
+      break;
+  }
+}
+
+function renderRail(weekNumber){
+  const rail = document.getElementById('rail');
+  rail.innerHTML = ROADMAP.map((name,i) => {
+    const wk = i+1;
+    const cls = wk < weekNumber ? 'done' : wk === weekNumber ? 'active' : '';
+    return `<div class="chip ${cls}">W${wk} · ${name}</div>`;
+  }).join('');
+}
+
+document.querySelectorAll('.step').forEach(s => {
+  s.addEventListener('click', () => {
+    s.classList.toggle('open');
+    if(s.classList.contains('open')) s.querySelector('.body').textContent = s.dataset.a;
+    else s.querySelector('.body').textContent = s.querySelector('.num').nextSibling.textContent;
+  });
+});
+
+fetch('revision.json?_=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const e = data.today;
+    document.getElementById('streakVal').textContent = data.streak;
+    document.getElementById('bestVal').textContent = data.best_streak;
+    document.getElementById('weekNum').textContent = e.week_number;
+    document.getElementById('dayNum').textContent = e.day_in_week;
+    document.getElementById('focusLabel').textContent = FOCUS_LABELS[e.focus] || e.focus;
+    document.getElementById('headline').textContent = e.headline_takeaway || '';
+    drawDiagram(e.primary, e.subsidiary);
+    renderCards(e);
+    renderRail(e.week_number);
+  })
+  .catch(() => {
+    document.getElementById('headline').textContent =
+      "No revision data yet — run the GitHub Action once to generate today's block.";
+  });
+</script>
+</body>
+</html>
