@@ -7,11 +7,11 @@
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Distinguish between identical and non-identical elements in the window.",
-    "trigger_variant": "A sorted array with duplicate values, where order doesn't matter.",
-    "gotcha": "Forgetting to reset the pointers when the window moves.",
-    "one_liner": "Slide or shrink, don't skip elements.",
-    "diagram_hint": "Two pointers, one fixed, one moving, highlighting potential swaps."
+    "headline_takeaway": "Use Two Pointers when sorted order is broken.",
+    "trigger_variant": "Trigger Variant: Find the first duplicate in an array that has duplicate values, where order matters.",
+    "gotcha": "Gotcha: Don't assume sorted order is always preserved when using Two Pointers.",
+    "one_liner": "Two Pointers dance through sorted chaos.",
+    "diagram_hint": "Two arrows moving towards each other, stopping at first mismatch."
   },
   "streak": 1,
   "best_streak": 1,
