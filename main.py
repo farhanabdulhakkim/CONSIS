@@ -158,7 +158,12 @@ def execute_pipeline(is_evening):
     
     sender_email = os.environ.get("EMAIL_USER")
     sender_password = os.environ.get("EMAIL_PASS")
-    dashboard_url = os.environ.get("DASHBOARD_URL", "#")
+
+    # Smart fallback URL for GitHub Pages / repository view
+    default_url = "https://farhanabdulhakkim.github.io/CONSIS/"
+    dashboard_url = os.environ.get("DASHBOARD_URL", "")
+    if not dashboard_url or dashboard_url == "#":
+        dashboard_url = default_url
 
     # Generate Animated index.html Command Center
     dashboard_html = f"""<!DOCTYPE html>
@@ -229,14 +234,71 @@ def execute_pipeline(is_evening):
         
         if is_evening:
             msg['Subject'] = f"✅ Daily Wrap-Up: +{points} XP Earned! (Total: {score} XP)"
-            email_html = f"<h2>End of Day Review</h2><h3>+{points} XP Earned! Total Consistency Score: {score} XP 🏆</h3><p>Your focus for tomorrow has been logged.</p>"
+            email_html = f"""
+            <html><body style="font-family: Arial, sans-serif; background-color: #f3f4f6; padding: 30px;">
+                <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #111827;">End of Day Review</h2>
+                    <h3 style="color: #10b981;">+{points} XP Earned! Total Consistency Score: {score} XP 🏆</h3>
+                    <p style="color: #4b5563;">Your focus for tomorrow has been logged.</p>
+                </div>
+            </body></html>
+            """
         else:
             msg['Subject'] = f"🚀 Morning Brief is Live ({score} XP)"
             email_html = f"""
-            <html><body style="font-family: Arial, sans-serif; background: #f3f4f6; padding: 40px; text-align: center;">
-                <h2 style="color: #111827;">Your Animated Dashboard is Ready</h2>
-                <a href="{dashboard_url}" style="display: inline-block; background: #2563eb; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px;">Open Morning Command Center</a>
-            </body></html>
+            <html>
+              <head>
+                <style>
+                  body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; padding: 20px; }}
+                  .container {{ max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }}
+                  .header {{ text-align: center; color: #111827; border-bottom: 2px solid #e5e7eb; padding-bottom: 20px; margin-bottom: 20px; }}
+                  .quote-box {{ background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; font-style: italic; font-size: 1.05em; color: #92400e; margin: 20px 0; border-radius: 4px; }}
+                  .btn {{ display: inline-block; background: #2563eb; color: #ffffff !important; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; margin: 10px 0; }}
+                  .task-box {{ background: #f9fafb; padding: 15px; border-radius: 8px; border: 1px solid #e5e7eb; margin-bottom: 15px; }}
+                  h2 {{ color: #374151; margin-top: 20px; border-bottom: 2px solid #f3f4f6; padding-bottom: 6px; font-size: 1.15em; }}
+                </style>
+              </head>
+              <body>
+                <div class="container">
+                  <div class="header">
+                    <h1 style="margin-bottom: 10px;">Good Morning, Farhan! 🚀</h1>
+                    <a href="{dashboard_url}" target="_blank" class="btn">🌐 Open Morning Command Center</a>
+                  </div>
+                  
+                  <div class="quote-box">
+                    "{quote}"
+                  </div>
+
+                  <div style="text-align: center; margin: 20px 0; padding: 15px; background: #f0fdf4; border-radius: 8px; border: 1px solid #bbf7d0;">
+                    <h3 style="color: #4f46e5; margin: 0;">Total Consistency Score: {score} XP 🏆</h3>
+                  </div>
+
+                  <h2>🎯 Today's Mission</h2>
+                  <div class="task-box">
+                    <p style="color: #10b981; font-weight: bold; font-size: 1.1em; margin: 0;">{custom_task}</p>
+                  </div>
+
+                  <h2>⚡ Daily DSA Revision (Dual-Pattern)</h2>
+                  <div class="task-box">
+                    {revision_html}
+                  </div>
+
+                  <h2>💪 Gym Protocol: {today_name}</h2>
+                  <div class="task-box">
+                    {workout}
+                  </div>
+
+                  <h2>📰 Tech Radar</h2>
+                  <div class="task-box">
+                    {news}
+                  </div>
+
+                  <div style="text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
+                    <a href="{dashboard_url}" target="_blank" class="btn">🌐 Launch Live Web Dashboard</a>
+                  </div>
+                </div>
+              </body>
+            </html>
             """
         msg.attach(MIMEText(email_html, 'html'))
 
