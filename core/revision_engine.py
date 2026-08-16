@@ -210,19 +210,22 @@ def generate_today_revision():
     }
     _save_state(state)
 
-    # publish for the GitHub Pages viewer
+    # publish for the GitHub Pages viewer (both docs/ and root for compatibility)
+    payload = {
+        "today": entry,
+        "streak": state["streak"],
+        "best_streak": state["best_streak"],
+        "roadmap_position": {
+            "week_number": ctx["week_number"],
+            "day_in_week": ctx["day_in_week"],
+            "cycle_number": ctx["cycle_number"],
+        },
+        "history": state["history"][-14:],  # last 2 weeks for the page
+    }
     os.makedirs("docs", exist_ok=True)
     with open("docs/revision.json", "w") as f:
-        json.dump({
-            "today": entry,
-            "streak": state["streak"],
-            "best_streak": state["best_streak"],
-            "roadmap_position": {
-                "week_number": ctx["week_number"],
-                "day_in_week": ctx["day_in_week"],
-                "cycle_number": ctx["cycle_number"],
-            },
-            "history": state["history"][-14:],  # last 2 weeks for the page
-        }, f, indent=2)
+        json.dump(payload, f, indent=2)
+    with open("revision.json", "w") as f:
+        json.dump(payload, f, indent=2)
 
     return entry

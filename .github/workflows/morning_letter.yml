@@ -1,4 +1,4 @@
-name: Morning Brief
+name: Morning Brief & Daily Revision
 
 on:
   schedule:
@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to save the HTML file
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -20,20 +20,20 @@ jobs:
           python-version: '3.10'
           
       - name: Install Dependencies
-        run: pip install requests groq secure-smtplib
+        run: pip install -r requirements.txt
         
-      - name: Run Script (Generates HTML)
+      - name: Run Morning Script
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         run: python main.py
         
-      - name: Commit and Deploy Dashboard
+      - name: Commit and Deploy Dashboard & State
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add index.html
-          git commit -m "Automated Morning Dashboard Build" || echo "No changes"
+          git add index.html revision.json core/revision_state.json docs/revision.json docs/index.html
+          git commit -m "Automated Morning Revision Build" || echo "No changes to commit"
           git push

@@ -16,11 +16,11 @@
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Adjust Two Pointers' step size based on Sliding Window's rate.",
-    "trigger_variant": "Sliding Window's size is a multiple of Two Pointers' increment.",
-    "gotcha": "Failing to adjust the Two Pointers' increment when Sliding Window's rate changes.",
-    "one_liner": "Shrink or expand Two Pointers at the window's rate.",
-    "diagram_hint": "Two Pointers with arrows showing variable increment, Sliding Window box."
+    "headline_takeaway": "Anchor on Sliding Window's fixed-size moving view",
+    "trigger_variant": "Array with non-uniformly distributed, non-contiguous elements",
+    "gotcha": "Failing to reset the window when the pattern's conditions change",
+    "one_liner": "Fixed-size, moving view: slide, don't shift!",
+    "diagram_hint": "Sliding window with varying sizes, highlighting boundary moves"
   },
   "history": [
     {
