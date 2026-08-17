@@ -1,26 +1,26 @@
 {
-  "cycle_day_index": 1,
-  "streak": 1,
-  "best_streak": 1,
-  "last_run_date": "2026-08-16",
+  "cycle_day_index": 2,
+  "streak": 2,
+  "best_streak": 2,
+  "last_run_date": "2026-08-17",
   "roadmap_position": {
     "week_number": 1,
     "day_in_week": 2,
     "cycle_number": 1
   },
   "today": {
-    "date": "2026-08-16",
+    "date": "2026-08-17",
     "week_number": 1,
     "day_in_week": 2,
     "cycle_number": 1,
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
     "focus": "anchor_drill",
-    "headline_takeaway": "Consider edge cases when implementing Sliding Window.",
-    "trigger_variant": "Two arrays with non-contiguous elements: find common prefix",
-    "gotcha": "Forgetting to reset the window when the required element is found.",
-    "one_liner": "Sliding Window: Don't recompute everything, just advance the window.",
-    "diagram_hint": "Overlapping windows with shrinking and expanding edges."
+    "headline_takeaway": "Apply Sliding Window when fixed-size or known-size window moves.",
+    "trigger_variant": "Sliding Window with non-uniform element costs or priorities",
+    "gotcha": "Failing to adjust window size when elements' weights change",
+    "one_liner": "Window size stays constant; elements' weights change",
+    "diagram_hint": "Arrows with different labels (weights) converging on a shared index"
   },
   "history": [
     {
@@ -34,6 +34,20 @@
       "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable"
+    },
+    {
+      "date": "2026-08-17",
+      "week_number": 1,
+      "day_in_week": 2,
+      "cycle_number": 1,
+      "primary": "Sliding Window",
+      "subsidiary": "Two Pointers",
+      "focus": "anchor_drill",
+      "headline_takeaway": "Apply Sliding Window when fixed-size or known-size window moves.",
+      "trigger_variant": "Sliding Window with non-uniform element costs or priorities",
+      "gotcha": "Failing to adjust window size when elements' weights change",
+      "one_liner": "Window size stays constant; elements' weights change",
+      "diagram_hint": "Arrows with different labels (weights) converging on a shared index"
     }
   ]
 }
