@@ -1,26 +1,24 @@
 {
-  "cycle_day_index": 2,
-  "streak": 2,
-  "best_streak": 2,
-  "last_run_date": "2026-08-17",
+  "cycle_day_index": 3,
+  "streak": 3,
+  "best_streak": 3,
+  "last_run_date": "2026-08-18",
   "roadmap_position": {
     "week_number": 1,
-    "day_in_week": 2,
+    "day_in_week": 3,
     "cycle_number": 1
   },
   "today": {
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "week_number": 1,
-    "day_in_week": 2,
+    "day_in_week": 3,
     "cycle_number": 1,
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
-    "focus": "anchor_drill",
-    "headline_takeaway": "Apply Sliding Window when fixed-size or known-size window moves.",
-    "trigger_variant": "Sliding Window with non-uniform element costs or priorities",
-    "gotcha": "Failing to adjust window size when elements' weights change",
-    "one_liner": "Window size stays constant; elements' weights change",
-    "diagram_hint": "Arrows with different labels (weights) converging on a shared index"
+    "focus": "subsidiary_deep_dive",
+    "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
+    "diagram_hint": "two labeled boxes with a dashed connecting line",
+    "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
     {
@@ -48,6 +46,18 @@
       "gotcha": "Failing to adjust window size when elements' weights change",
       "one_liner": "Window size stays constant; elements' weights change",
       "diagram_hint": "Arrows with different labels (weights) converging on a shared index"
+    },
+    {
+      "date": "2026-08-18",
+      "week_number": 1,
+      "day_in_week": 3,
+      "cycle_number": 1,
+      "primary": "Sliding Window",
+      "subsidiary": "Two Pointers",
+      "focus": "subsidiary_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
   ]
 }
