@@ -1,21 +1,21 @@
 {
   "today": {
-    "date": "2026-08-20",
+    "date": "2026-08-21",
     "week_number": 1,
-    "day_in_week": 5,
+    "day_in_week": 6,
     "cycle_number": 1,
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
-    "focus": "mixed_problem",
+    "focus": "recall_test",
     "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 5,
-  "best_streak": 5,
+  "streak": 6,
+  "best_streak": 6,
   "roadmap_position": {
     "week_number": 1,
-    "day_in_week": 5,
+    "day_in_week": 6,
     "cycle_number": 1
   },
   "history": [
@@ -77,6 +77,18 @@
       "primary": "Sliding Window",
       "subsidiary": "Two Pointers",
       "focus": "mixed_problem",
+      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-08-21",
+      "week_number": 1,
+      "day_in_week": 6,
+      "cycle_number": 1,
+      "primary": "Sliding Window",
+      "subsidiary": "Two Pointers",
+      "focus": "recall_test",
       "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
