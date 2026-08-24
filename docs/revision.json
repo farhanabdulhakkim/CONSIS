@@ -1,21 +1,21 @@
 {
   "today": {
-    "date": "2026-08-23",
+    "date": "2026-08-24",
     "week_number": 2,
-    "day_in_week": 1,
+    "day_in_week": 2,
     "cycle_number": 1,
     "primary": "Prefix Sum",
     "subsidiary": "Hash Map",
-    "focus": "anchor_deep_dive",
+    "focus": "anchor_drill",
     "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 8,
-  "best_streak": 8,
+  "streak": 9,
+  "best_streak": 9,
   "roadmap_position": {
     "week_number": 2,
-    "day_in_week": 1,
+    "day_in_week": 2,
     "cycle_number": 1
   },
   "history": [
@@ -113,6 +113,18 @@
       "primary": "Prefix Sum",
       "subsidiary": "Hash Map",
       "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-08-24",
+      "week_number": 2,
+      "day_in_week": 2,
+      "cycle_number": 1,
+      "primary": "Prefix Sum",
+      "subsidiary": "Hash Map",
+      "focus": "anchor_drill",
       "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
