@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-08-29",
-    "week_number": 2,
-    "day_in_week": 7,
+    "date": "2026-08-30",
+    "week_number": 3,
+    "day_in_week": 1,
     "cycle_number": 1,
-    "primary": "Prefix Sum",
-    "subsidiary": "Hash Map",
-    "focus": "next_week_preview",
-    "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+    "primary": "Monotonic Stack",
+    "subsidiary": "Next Greater Element",
+    "focus": "anchor_deep_dive",
+    "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 14,
-  "best_streak": 14,
+  "streak": 15,
+  "best_streak": 15,
   "roadmap_position": {
-    "week_number": 2,
-    "day_in_week": 7,
+    "week_number": 3,
+    "day_in_week": 1,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-08-16",
-      "week_number": 1,
-      "day_in_week": 1,
-      "cycle_number": 1,
-      "primary": "Sliding Window",
-      "subsidiary": "Two Pointers",
-      "focus": "anchor_deep_dive",
-      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable"
-    },
     {
       "date": "2026-08-17",
       "week_number": 1,
@@ -186,6 +174,18 @@
       "subsidiary": "Hash Map",
       "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-08-30",
+      "week_number": 3,
+      "day_in_week": 1,
+      "cycle_number": 1,
+      "primary": "Monotonic Stack",
+      "subsidiary": "Next Greater Element",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
