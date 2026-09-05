@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-04",
+    "date": "2026-09-05",
     "week_number": 3,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 1,
     "primary": "Monotonic Stack",
     "subsidiary": "Next Greater Element",
-    "focus": "recall_test",
+    "focus": "next_week_preview",
     "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 20,
-  "best_streak": 20,
+  "streak": 21,
+  "best_streak": 21,
   "roadmap_position": {
     "week_number": 3,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-08-22",
-      "week_number": 1,
-      "day_in_week": 7,
-      "cycle_number": 1,
-      "primary": "Sliding Window",
-      "subsidiary": "Two Pointers",
-      "focus": "next_week_preview",
-      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-08-23",
       "week_number": 2,
@@ -183,6 +171,18 @@
       "primary": "Monotonic Stack",
       "subsidiary": "Next Greater Element",
       "focus": "recall_test",
+      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-05",
+      "week_number": 3,
+      "day_in_week": 7,
+      "cycle_number": 1,
+      "primary": "Monotonic Stack",
+      "subsidiary": "Next Greater Element",
+      "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"

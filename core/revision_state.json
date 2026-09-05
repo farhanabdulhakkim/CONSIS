@@ -1,21 +1,21 @@
 {
-  "cycle_day_index": 20,
-  "streak": 20,
-  "best_streak": 20,
-  "last_run_date": "2026-09-04",
+  "cycle_day_index": 21,
+  "streak": 21,
+  "best_streak": 21,
+  "last_run_date": "2026-09-05",
   "roadmap_position": {
     "week_number": 3,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 1
   },
   "today": {
-    "date": "2026-09-04",
+    "date": "2026-09-05",
     "week_number": 3,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 1,
     "primary": "Monotonic Stack",
     "subsidiary": "Next Greater Element",
-    "focus": "recall_test",
+    "focus": "next_week_preview",
     "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
@@ -259,6 +259,18 @@
       "primary": "Monotonic Stack",
       "subsidiary": "Next Greater Element",
       "focus": "recall_test",
+      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-05",
+      "week_number": 3,
+      "day_in_week": 7,
+      "cycle_number": 1,
+      "primary": "Monotonic Stack",
+      "subsidiary": "Next Greater Element",
+      "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
