@@ -1,21 +1,21 @@
 {
-  "cycle_day_index": 23,
-  "streak": 23,
-  "best_streak": 23,
-  "last_run_date": "2026-09-07",
+  "cycle_day_index": 24,
+  "streak": 24,
+  "best_streak": 24,
+  "last_run_date": "2026-09-08",
   "roadmap_position": {
     "week_number": 4,
-    "day_in_week": 2,
+    "day_in_week": 3,
     "cycle_number": 1
   },
   "today": {
-    "date": "2026-09-07",
+    "date": "2026-09-08",
     "week_number": 4,
-    "day_in_week": 2,
+    "day_in_week": 3,
     "cycle_number": 1,
     "primary": "Top K (Heaps)",
     "subsidiary": "Quickselect",
-    "focus": "anchor_drill",
+    "focus": "subsidiary_deep_dive",
     "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
@@ -295,6 +295,18 @@
       "primary": "Top K (Heaps)",
       "subsidiary": "Quickselect",
       "focus": "anchor_drill",
+      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-08",
+      "week_number": 4,
+      "day_in_week": 3,
+      "cycle_number": 1,
+      "primary": "Top K (Heaps)",
+      "subsidiary": "Quickselect",
+      "focus": "subsidiary_deep_dive",
       "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
