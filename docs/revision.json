@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-09",
+    "date": "2026-09-10",
     "week_number": 4,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 1,
     "primary": "Top K (Heaps)",
     "subsidiary": "Quickselect",
-    "focus": "connection_bridge",
+    "focus": "mixed_problem",
     "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 25,
-  "best_streak": 25,
+  "streak": 26,
+  "best_streak": 26,
   "roadmap_position": {
     "week_number": 4,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-08-27",
-      "week_number": 2,
-      "day_in_week": 5,
-      "cycle_number": 1,
-      "primary": "Prefix Sum",
-      "subsidiary": "Hash Map",
-      "focus": "mixed_problem",
-      "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-08-28",
       "week_number": 2,
@@ -183,6 +171,18 @@
       "primary": "Top K (Heaps)",
       "subsidiary": "Quickselect",
       "focus": "connection_bridge",
+      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-10",
+      "week_number": 4,
+      "day_in_week": 5,
+      "cycle_number": 1,
+      "primary": "Top K (Heaps)",
+      "subsidiary": "Quickselect",
+      "focus": "mixed_problem",
       "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
