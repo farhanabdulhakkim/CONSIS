@@ -1,22 +1,22 @@
 {
-  "cycle_day_index": 28,
-  "streak": 28,
-  "best_streak": 28,
-  "last_run_date": "2026-09-12",
+  "cycle_day_index": 29,
+  "streak": 29,
+  "best_streak": 29,
+  "last_run_date": "2026-09-13",
   "roadmap_position": {
-    "week_number": 4,
-    "day_in_week": 7,
+    "week_number": 5,
+    "day_in_week": 1,
     "cycle_number": 1
   },
   "today": {
-    "date": "2026-09-12",
-    "week_number": 4,
-    "day_in_week": 7,
+    "date": "2026-09-13",
+    "week_number": 5,
+    "day_in_week": 1,
     "cycle_number": 1,
-    "primary": "Top K (Heaps)",
-    "subsidiary": "Quickselect",
-    "focus": "next_week_preview",
-    "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
+    "primary": "BFS",
+    "subsidiary": "Queue / Level Order",
+    "focus": "anchor_deep_dive",
+    "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
@@ -356,6 +356,18 @@
       "subsidiary": "Quickselect",
       "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-13",
+      "week_number": 5,
+      "day_in_week": 1,
+      "cycle_number": 1,
+      "primary": "BFS",
+      "subsidiary": "Queue / Level Order",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
