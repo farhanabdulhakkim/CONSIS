@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "week_number": 5,
-    "day_in_week": 3,
+    "day_in_week": 4,
     "cycle_number": 1,
     "primary": "BFS",
     "subsidiary": "Queue / Level Order",
-    "focus": "subsidiary_deep_dive",
+    "focus": "connection_bridge",
     "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 31,
-  "best_streak": 31,
+  "streak": 32,
+  "best_streak": 32,
   "roadmap_position": {
     "week_number": 5,
-    "day_in_week": 3,
+    "day_in_week": 4,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-09-02",
-      "week_number": 3,
-      "day_in_week": 4,
-      "cycle_number": 1,
-      "primary": "Monotonic Stack",
-      "subsidiary": "Next Greater Element",
-      "focus": "connection_bridge",
-      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-03",
       "week_number": 3,
@@ -183,6 +171,18 @@
       "primary": "BFS",
       "subsidiary": "Queue / Level Order",
       "focus": "subsidiary_deep_dive",
+      "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-16",
+      "week_number": 5,
+      "day_in_week": 4,
+      "cycle_number": 1,
+      "primary": "BFS",
+      "subsidiary": "Queue / Level Order",
+      "focus": "connection_bridge",
       "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
