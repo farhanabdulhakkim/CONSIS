@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-19",
-    "week_number": 5,
-    "day_in_week": 7,
+    "date": "2026-09-20",
+    "week_number": 6,
+    "day_in_week": 1,
     "cycle_number": 1,
-    "primary": "BFS",
-    "subsidiary": "Queue / Level Order",
-    "focus": "next_week_preview",
-    "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
+    "primary": "DFS",
+    "subsidiary": "Backtracking",
+    "focus": "anchor_deep_dive",
+    "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 35,
-  "best_streak": 35,
+  "streak": 36,
+  "best_streak": 36,
   "roadmap_position": {
-    "week_number": 5,
-    "day_in_week": 7,
+    "week_number": 6,
+    "day_in_week": 1,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-09-06",
-      "week_number": 4,
-      "day_in_week": 1,
-      "cycle_number": 1,
-      "primary": "Top K (Heaps)",
-      "subsidiary": "Quickselect",
-      "focus": "anchor_deep_dive",
-      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-07",
       "week_number": 4,
@@ -184,6 +172,18 @@
       "subsidiary": "Queue / Level Order",
       "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-20",
+      "week_number": 6,
+      "day_in_week": 1,
+      "cycle_number": 1,
+      "primary": "DFS",
+      "subsidiary": "Backtracking",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
