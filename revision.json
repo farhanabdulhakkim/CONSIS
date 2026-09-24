@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "week_number": 6,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 1,
     "primary": "DFS",
     "subsidiary": "Backtracking",
-    "focus": "connection_bridge",
+    "focus": "mixed_problem",
     "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 39,
-  "best_streak": 39,
+  "streak": 40,
+  "best_streak": 40,
   "roadmap_position": {
     "week_number": 6,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-09-10",
-      "week_number": 4,
-      "day_in_week": 5,
-      "cycle_number": 1,
-      "primary": "Top K (Heaps)",
-      "subsidiary": "Quickselect",
-      "focus": "mixed_problem",
-      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-11",
       "week_number": 4,
@@ -183,6 +171,18 @@
       "primary": "DFS",
       "subsidiary": "Backtracking",
       "focus": "connection_bridge",
+      "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-24",
+      "week_number": 6,
+      "day_in_week": 5,
+      "cycle_number": 1,
+      "primary": "DFS",
+      "subsidiary": "Backtracking",
+      "focus": "mixed_problem",
       "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
