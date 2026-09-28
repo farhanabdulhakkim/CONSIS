@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-09-27",
+    "date": "2026-09-28",
     "week_number": 7,
-    "day_in_week": 1,
+    "day_in_week": 2,
     "cycle_number": 1,
     "primary": "Matrix Traversal",
     "subsidiary": "Direction Arrays & Boundary Checks",
-    "focus": "anchor_deep_dive",
+    "focus": "anchor_drill",
     "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 43,
-  "best_streak": 43,
+  "streak": 44,
+  "best_streak": 44,
   "roadmap_position": {
     "week_number": 7,
-    "day_in_week": 1,
+    "day_in_week": 2,
     "cycle_number": 1
   },
   "history": [
-    {
-      "date": "2026-09-14",
-      "week_number": 5,
-      "day_in_week": 2,
-      "cycle_number": 1,
-      "primary": "BFS",
-      "subsidiary": "Queue / Level Order",
-      "focus": "anchor_drill",
-      "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-15",
       "week_number": 5,
@@ -183,6 +171,18 @@
       "primary": "Matrix Traversal",
       "subsidiary": "Direction Arrays & Boundary Checks",
       "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-09-28",
+      "week_number": 7,
+      "day_in_week": 2,
+      "cycle_number": 1,
+      "primary": "Matrix Traversal",
+      "subsidiary": "Direction Arrays & Boundary Checks",
+      "focus": "anchor_drill",
       "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
