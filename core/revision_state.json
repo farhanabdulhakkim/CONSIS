@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 60,
-  "streak": 60,
-  "best_streak": 60,
-  "last_run_date": "2026-10-14",
+  "cycle_day_index": 61,
+  "streak": 61,
+  "best_streak": 61,
+  "last_run_date": "2026-10-15",
   "roadmap_position": {
     "week_number": 1,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "week_number": 1,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 2,
     "primary": "Sliding Window",
     "subsidiary": "Two Pointers",
-    "focus": "connection_bridge",
+    "focus": "mixed_problem",
     "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-08-20",
-      "week_number": 1,
-      "day_in_week": 5,
-      "cycle_number": 1,
-      "primary": "Sliding Window",
-      "subsidiary": "Two Pointers",
-      "focus": "mixed_problem",
-      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-08-21",
       "week_number": 1,
@@ -689,6 +677,18 @@
       "primary": "Sliding Window",
       "subsidiary": "Two Pointers",
       "focus": "connection_bridge",
+      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-10-15",
+      "week_number": 1,
+      "day_in_week": 5,
+      "cycle_number": 2,
+      "primary": "Sliding Window",
+      "subsidiary": "Two Pointers",
+      "focus": "mixed_problem",
       "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
