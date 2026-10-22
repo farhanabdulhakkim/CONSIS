@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "week_number": 2,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 2,
     "primary": "Prefix Sum",
     "subsidiary": "Hash Map",
-    "focus": "connection_bridge",
+    "focus": "mixed_problem",
     "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 67,
-  "best_streak": 67,
+  "streak": 68,
+  "best_streak": 68,
   "roadmap_position": {
     "week_number": 2,
-    "day_in_week": 4,
+    "day_in_week": 5,
     "cycle_number": 2
   },
   "history": [
-    {
-      "date": "2026-10-08",
-      "week_number": 8,
-      "day_in_week": 5,
-      "cycle_number": 1,
-      "primary": "DP Patterns",
-      "subsidiary": "Memoization & Table Transitions",
-      "focus": "mixed_problem",
-      "headline_takeaway": "(offline fallback) Review DP Patterns vs Memoization & Table Transitions manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-10-09",
       "week_number": 8,
@@ -183,6 +171,18 @@
       "primary": "Prefix Sum",
       "subsidiary": "Hash Map",
       "focus": "connection_bridge",
+      "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-10-22",
+      "week_number": 2,
+      "day_in_week": 5,
+      "cycle_number": 2,
+      "primary": "Prefix Sum",
+      "subsidiary": "Hash Map",
+      "focus": "mixed_problem",
       "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
