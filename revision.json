@@ -1,36 +1,24 @@
 {
   "today": {
-    "date": "2026-10-24",
-    "week_number": 2,
-    "day_in_week": 7,
+    "date": "2026-10-25",
+    "week_number": 3,
+    "day_in_week": 1,
     "cycle_number": 2,
-    "primary": "Prefix Sum",
-    "subsidiary": "Hash Map",
-    "focus": "next_week_preview",
-    "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+    "primary": "Monotonic Stack",
+    "subsidiary": "Next Greater Element",
+    "focus": "anchor_deep_dive",
+    "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
-  "streak": 70,
-  "best_streak": 70,
+  "streak": 71,
+  "best_streak": 71,
   "roadmap_position": {
-    "week_number": 2,
-    "day_in_week": 7,
+    "week_number": 3,
+    "day_in_week": 1,
     "cycle_number": 2
   },
   "history": [
-    {
-      "date": "2026-10-11",
-      "week_number": 1,
-      "day_in_week": 1,
-      "cycle_number": 2,
-      "primary": "Sliding Window",
-      "subsidiary": "Two Pointers",
-      "focus": "anchor_deep_dive",
-      "headline_takeaway": "(offline fallback) Review Sliding Window vs Two Pointers manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-10-12",
       "week_number": 1,
@@ -184,6 +172,18 @@
       "subsidiary": "Hash Map",
       "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Prefix Sum vs Hash Map manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-10-25",
+      "week_number": 3,
+      "day_in_week": 1,
+      "cycle_number": 2,
+      "primary": "Monotonic Stack",
+      "subsidiary": "Next Greater Element",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
