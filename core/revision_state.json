@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 75,
-  "streak": 75,
-  "best_streak": 75,
-  "last_run_date": "2026-10-29",
+  "cycle_day_index": 76,
+  "streak": 76,
+  "best_streak": 76,
+  "last_run_date": "2026-10-30",
   "roadmap_position": {
     "week_number": 3,
-    "day_in_week": 5,
+    "day_in_week": 6,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "week_number": 3,
-    "day_in_week": 5,
+    "day_in_week": 6,
     "cycle_number": 2,
     "primary": "Monotonic Stack",
     "subsidiary": "Next Greater Element",
-    "focus": "mixed_problem",
+    "focus": "recall_test",
     "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-09-04",
-      "week_number": 3,
-      "day_in_week": 6,
-      "cycle_number": 1,
-      "primary": "Monotonic Stack",
-      "subsidiary": "Next Greater Element",
-      "focus": "recall_test",
-      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-05",
       "week_number": 3,
@@ -689,6 +677,18 @@
       "primary": "Monotonic Stack",
       "subsidiary": "Next Greater Element",
       "focus": "mixed_problem",
+      "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-10-30",
+      "week_number": 3,
+      "day_in_week": 6,
+      "cycle_number": 2,
+      "primary": "Monotonic Stack",
+      "subsidiary": "Next Greater Element",
+      "focus": "recall_test",
       "headline_takeaway": "(offline fallback) Review Monotonic Stack vs Next Greater Element manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
