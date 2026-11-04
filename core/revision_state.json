@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 80,
-  "streak": 80,
-  "best_streak": 80,
-  "last_run_date": "2026-11-03",
+  "cycle_day_index": 81,
+  "streak": 81,
+  "best_streak": 81,
+  "last_run_date": "2026-11-04",
   "roadmap_position": {
     "week_number": 4,
-    "day_in_week": 3,
+    "day_in_week": 4,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "week_number": 4,
-    "day_in_week": 3,
+    "day_in_week": 4,
     "cycle_number": 2,
     "primary": "Top K (Heaps)",
     "subsidiary": "Quickselect",
-    "focus": "subsidiary_deep_dive",
+    "focus": "connection_bridge",
     "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-09-09",
-      "week_number": 4,
-      "day_in_week": 4,
-      "cycle_number": 1,
-      "primary": "Top K (Heaps)",
-      "subsidiary": "Quickselect",
-      "focus": "connection_bridge",
-      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-10",
       "week_number": 4,
@@ -689,6 +677,18 @@
       "primary": "Top K (Heaps)",
       "subsidiary": "Quickselect",
       "focus": "subsidiary_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-11-04",
+      "week_number": 4,
+      "day_in_week": 4,
+      "cycle_number": 2,
+      "primary": "Top K (Heaps)",
+      "subsidiary": "Quickselect",
+      "focus": "connection_bridge",
       "headline_takeaway": "(offline fallback) Review Top K (Heaps) vs Quickselect manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
