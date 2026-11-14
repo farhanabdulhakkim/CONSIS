@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 90,
-  "streak": 90,
-  "best_streak": 90,
-  "last_run_date": "2026-11-13",
+  "cycle_day_index": 91,
+  "streak": 91,
+  "best_streak": 91,
+  "last_run_date": "2026-11-14",
   "roadmap_position": {
     "week_number": 5,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "week_number": 5,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 2,
     "primary": "BFS",
     "subsidiary": "Queue / Level Order",
-    "focus": "recall_test",
+    "focus": "next_week_preview",
     "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-09-19",
-      "week_number": 5,
-      "day_in_week": 7,
-      "cycle_number": 1,
-      "primary": "BFS",
-      "subsidiary": "Queue / Level Order",
-      "focus": "next_week_preview",
-      "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-20",
       "week_number": 6,
@@ -689,6 +677,18 @@
       "primary": "BFS",
       "subsidiary": "Queue / Level Order",
       "focus": "recall_test",
+      "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-11-14",
+      "week_number": 5,
+      "day_in_week": 7,
+      "cycle_number": 2,
+      "primary": "BFS",
+      "subsidiary": "Queue / Level Order",
+      "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review BFS vs Queue / Level Order manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
