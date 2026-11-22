@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 98,
-  "streak": 98,
-  "best_streak": 98,
-  "last_run_date": "2026-11-21",
+  "cycle_day_index": 99,
+  "streak": 99,
+  "best_streak": 99,
+  "last_run_date": "2026-11-22",
   "roadmap_position": {
-    "week_number": 6,
-    "day_in_week": 7,
+    "week_number": 7,
+    "day_in_week": 1,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-11-21",
-    "week_number": 6,
-    "day_in_week": 7,
+    "date": "2026-11-22",
+    "week_number": 7,
+    "day_in_week": 1,
     "cycle_number": 2,
-    "primary": "DFS",
-    "subsidiary": "Backtracking",
-    "focus": "next_week_preview",
-    "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
+    "primary": "Matrix Traversal",
+    "subsidiary": "Direction Arrays & Boundary Checks",
+    "focus": "anchor_deep_dive",
+    "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-09-27",
-      "week_number": 7,
-      "day_in_week": 1,
-      "cycle_number": 1,
-      "primary": "Matrix Traversal",
-      "subsidiary": "Direction Arrays & Boundary Checks",
-      "focus": "anchor_deep_dive",
-      "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-09-28",
       "week_number": 7,
@@ -690,6 +678,18 @@
       "subsidiary": "Backtracking",
       "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review DFS vs Backtracking manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-11-22",
+      "week_number": 7,
+      "day_in_week": 1,
+      "cycle_number": 2,
+      "primary": "Matrix Traversal",
+      "subsidiary": "Direction Arrays & Boundary Checks",
+      "focus": "anchor_deep_dive",
+      "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
     }
