@@ -1,38 +1,26 @@
 {
-  "cycle_day_index": 104,
-  "streak": 104,
-  "best_streak": 104,
-  "last_run_date": "2026-11-27",
+  "cycle_day_index": 105,
+  "streak": 105,
+  "best_streak": 105,
+  "last_run_date": "2026-11-28",
   "roadmap_position": {
     "week_number": 7,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 2
   },
   "today": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "week_number": 7,
-    "day_in_week": 6,
+    "day_in_week": 7,
     "cycle_number": 2,
     "primary": "Matrix Traversal",
     "subsidiary": "Direction Arrays & Boundary Checks",
-    "focus": "recall_test",
+    "focus": "next_week_preview",
     "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
     "diagram_hint": "two labeled boxes with a dashed connecting line",
     "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
   },
   "history": [
-    {
-      "date": "2026-10-03",
-      "week_number": 7,
-      "day_in_week": 7,
-      "cycle_number": 1,
-      "primary": "Matrix Traversal",
-      "subsidiary": "Direction Arrays & Boundary Checks",
-      "focus": "next_week_preview",
-      "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
-      "diagram_hint": "two labeled boxes with a dashed connecting line",
-      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
-    },
     {
       "date": "2026-10-04",
       "week_number": 8,
@@ -689,6 +677,18 @@
       "primary": "Matrix Traversal",
       "subsidiary": "Direction Arrays & Boundary Checks",
       "focus": "recall_test",
+      "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
+      "diagram_hint": "two labeled boxes with a dashed connecting line",
+      "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "date": "2026-11-28",
+      "week_number": 7,
+      "day_in_week": 7,
+      "cycle_number": 2,
+      "primary": "Matrix Traversal",
+      "subsidiary": "Direction Arrays & Boundary Checks",
+      "focus": "next_week_preview",
       "headline_takeaway": "(offline fallback) Review Matrix Traversal vs Direction Arrays & Boundary Checks manually today.",
       "diagram_hint": "two labeled boxes with a dashed connecting line",
       "_error": "Groq revision call failed after retries: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
